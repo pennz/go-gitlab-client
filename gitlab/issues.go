@@ -2,6 +2,7 @@ package gitlab
 
 import (
 	"encoding/json"
+	"io"
 )
 
 const (
@@ -21,6 +22,20 @@ type Issue struct {
 	State       string     `json:"state,omitempty"`
 	CreatedAt   string     `json:"created_at,omitempty"`
 	UpdatedAt   string     `json:"updated_at,omitempty"`
+}
+
+type IssueCollection struct {
+	Items []*Issue
+}
+
+type IssuesOptions struct {
+	PaginationOptions
+
+	AuthorID         int      `json:"author_id,omitempty"`
+	AuthorUsername   int      `json:"author_username,omitempty"`
+	AssigneeID       int      `json:"assignee_id,omitempty"`
+	AssigneeUsername []string `json:"assignee_username,omitempty"`
+	IIDs             []int    `json:"iids,omitempty"`
 }
 
 type IssueRequest struct {
@@ -54,4 +69,28 @@ func (g *Gitlab) AddIssue(projectId string, req *IssueRequest) (issue *Issue, me
 	}
 
 	return
+}
+
+// ProjectIssues get all the issue for this project
+func (g *Gitlab) ProjectIssues(projectId string, o *IssuesOptions) (collection *IssueCollection, meta *ResponseMeta, err error) {
+	u := g.ResourceUrlQ(ProjectIssuesApiPath, map[string]string{
+		":id": projectId,
+	}, o)
+
+	collection = new(IssueCollection)
+
+	contents, meta, err := g.buildAndExecRequest("GET", u.String(), nil)
+	if err == nil {
+		err = json.Unmarshal(contents, &collection.Items)
+	}
+
+	return collection, meta, err
+}
+
+func (c *IssueCollection) RenderJson(w io.Writer) error {
+	return renderJson(w, c.Items)
+}
+
+func (c *IssueCollection) RenderYaml(w io.Writer) error {
+	return renderYaml(w, c.Items)
 }
