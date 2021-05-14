@@ -171,6 +171,8 @@ github.com/olekukonko/tablewriter v0.0.5/go.mod h1:hPp6KlRPjbx+hW8ykQs1w3UBbZlj6
 github.com/pascaldekloe/goe v0.0.0-20180627143212-57f6aae5913c/go.mod h1:lzWF7FIEvWOWxwDKqyGYQf6ZUaNfKdP144TG7ZOy1lc=
 github.com/pelletier/go-buffruneio v0.2.0/go.mod h1:JkE26KsDizTr40EUHkXVtNPvgGtbSNq5BcowyYOWdKo=
 github.com/pelletier/go-toml v1.2.0/go.mod h1:5z9KED0ma1S8pY6P1sdut58dfprrGBbd/94hg7ilaic=
+github.com/pennz/go-gitlab-client/test v0.0.0-20210514061436-cc1e84d1b235 h1:hbPa+dzvc3blGAMEZPdiN3IZPMZT6zByXtkbyYtwUfI=
+github.com/pennz/go-gitlab-client/test v0.0.0-20210514061436-cc1e84d1b235/go.mod h1:ZXeK10fAwX6XTNGgAwNrQsJoncsJq76DlIvS/XA99MQ=
 github.com/pkg/errors v0.8.0/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/plouc/gosnap v0.0.0-20180714070049-61403c2f226e h1:tHh9lJUhelmKm0N097wXkqZjXAgKp26kAJzhTNc/Ryk=
