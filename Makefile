@@ -51,7 +51,7 @@ help: ##prints help
 
 install: ##@setup Install go dependencies
 	@echo "${YELLOW}Installing dependencies${RESET}"
-	go get ${install_flags} gopkg.in/alecthomas/gometalinter.v2
+	go get ${install_flags} gopkg.in/alecthomas/gometalinter.v3
 	gometalinter.v2 --install
 	go list -f '{{range .Imports}}{{.}} {{end}}' ./... | xargs go get ${install_flags}
 	go list -f '{{range .TestImports}}{{.}} {{end}}' ./... | xargs go get ${install_flags}

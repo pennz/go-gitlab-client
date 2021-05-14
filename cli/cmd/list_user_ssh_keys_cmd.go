@@ -5,8 +5,8 @@ import (
 	"strconv"
 
 	"github.com/fatih/color"
-	out "github.com/plouc/go-gitlab-client/cli/output"
-	"github.com/plouc/go-gitlab-client/gitlab"
+	out "github.com/pennz/go-gitlab-client/cli/output"
+	"github.com/pennz/go-gitlab-client/gitlab"
 	"github.com/spf13/cobra"
 )
 

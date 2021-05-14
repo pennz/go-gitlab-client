@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/fatih/color"
-	out "github.com/plouc/go-gitlab-client/cli/output"
+	out "github.com/pennz/go-gitlab-client/cli/output"
 	"github.com/spf13/cobra"
 )
 

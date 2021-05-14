@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/plouc/go-gitlab-client/gitlab"
+	"github.com/pennz/go-gitlab-client/gitlab"
 	"github.com/spf13/cobra"
 	"os"
 )

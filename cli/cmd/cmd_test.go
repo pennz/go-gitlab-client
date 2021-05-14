@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/plouc/go-gitlab-client/test"
+	"github.com/pennz/go-gitlab-client/test"
 )
 
 func TestMain(m *testing.M) {

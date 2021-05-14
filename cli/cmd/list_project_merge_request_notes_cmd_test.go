@@ -3,7 +3,7 @@ package cmd
 import (
 	"testing"
 
-	"github.com/plouc/go-gitlab-client/test"
+	"github.com/pennz/go-gitlab-client/test"
 )
 
 func TestListProjectMergeRequestNotesCmd(t *testing.T) {

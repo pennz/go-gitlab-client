@@ -3,7 +3,7 @@ package cmd
 import (
 	"github.com/fatih/color"
 	"github.com/manifoldco/promptui"
-	"github.com/plouc/go-gitlab-client/gitlab"
+	"github.com/pennz/go-gitlab-client/gitlab"
 )
 
 func promptVariable() (*gitlab.Variable, error) {
