@@ -15,3 +15,4 @@ require (
 )
 
 replace github.com/pennz/go-gitlab-client/gitlab => ../gitlab
+replace github.com/pennz/go-gitlab-client/test => ../test

@@ -2,6 +2,7 @@ package gitlab
 
 import (
 	"encoding/json"
+	"fmt"
 	"io"
 	"net/url"
 	"strconv"
@@ -284,7 +285,7 @@ Parameters:
 */
 func (g *Gitlab) AddMergeRequest(req *AddMergeRequestRequest) (*MergeRequest, error) {
 	u := g.ResourceUrl(ProjectMergeRequestsApiPath, map[string]string{
-		":id": string(req.TargetProjectId),
+		":id": fmt.Sprint(req.TargetProjectId),
 	})
 
 	encodedRequest, err := json.Marshal(req)
@@ -317,8 +318,8 @@ Parameters:
 */
 func (g *Gitlab) EditMergeRequest(mr *MergeRequest) error {
 	u := g.ResourceUrl(ProjectMergeRequestApiPath, map[string]string{
-		":id":                string(mr.ProjectId),
-		":merge_request_idd": string(mr.Iid),
+		":id":                fmt.Sprint(mr.ProjectId),
+		":merge_request_idd": fmt.Sprint(mr.Iid),
 	})
 
 	encodedRequest, err := json.Marshal(mr)
